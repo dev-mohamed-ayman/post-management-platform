@@ -32,8 +32,8 @@ Follow these steps in order to set up your local development environment.
 First, clone the project repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/your-project-repo.git
-cd your-project-repo
+git clone https://github.com/dev-mohamed-ayman/post-management-platform.git
+cd post-management-platform
 ```
 
 ### 2. Backend Setup (Laravel)
@@ -123,14 +123,15 @@ Once both servers are running, you can access the application by navigating to t
 
 To make API testing easier, a Postman collection is included in the project root.
 
-**File Location:** `ProjectName.postman_collection.json`
+**File Location:** `Post Management Platform (Task).postman_collection.json`
 *(**Note**: Make sure you add your exported Postman file with this name to the project's root directory).*
 
 ### How to Use:
-1.  **Import:** Open Postman, click on `Import`, and select the `ProjectName.postman_collection.json` file from the project directory.
+1.  **Import:** Open Postman, click on `Import`, and select the `Post Management Platform (Task).postman_collection.json` file from the project directory.
 2.  **Configure Environment:** For best results, create a new Postman Environment and add a variable:
-    -   **Variable:** `base_url`
-    -   **Value:** `http://127.0.0.1:8000/api`
+    -   **Variable:** `url`
+    -   **Value:** `http://127.0.0.1:8000/api/`
+    -   **Variable:** `token`
 3.  Now you can use the imported collection to test all the API endpoints like login, register, posts, etc.
 
 ---
@@ -139,9 +140,8 @@ To make API testing easier, a Postman collection is included in the project root
 
 The database seeder (`db:seed` command) creates a set of default users to help you test the application immediately. You can log in with the following credentials on the login page:
 
-| Role        | Email                  | Password  |
-|-------------|------------------------|-----------|
-| **Admin**   | `admin@example.com`    | `password`|
-| **User**    | `user@example.com`     | `password`|
+| Role        | Email            | Password  |
+|-------------|------------------|-----------|
+| **Admin**   | `admin@demo.com` | `demo123`|
+| **User**    | `user@demo.com`  | `demo123`|
 
-These credentials can be found and modified in the `database/seeders/UserSeeder.php` file (or wherever they are defined).
